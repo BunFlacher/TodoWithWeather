@@ -1,10 +1,11 @@
-import React from "react";
+import React, { FC } from "react";
+import { TodoModel } from "./TodoModel";
 
-const TodoItem = (props) => {
+const TodoItem: FC<{ todo: TodoModel }> = ({ todo }) => {
     return (
         <div className="todo">
             <div className="todo__item">
-                <div>{props.todo.title} {props.todo.last}</div>
+                <div>{todo.title} {todo.last}</div>
             </div>
         </div>
     )
