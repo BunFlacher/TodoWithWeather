@@ -1,13 +1,91 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.todo{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.todo__item {
+    margin: 0 0 20px 20px;
+    list-style-type: none;
+    width: 170px;
+    height: 170px;
+    border-radius: 15px;
+}
+.todo__item:last-child {
+    margin-bottom: 100px ;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+.wrapper {
+    background-color: rgb(29,22,34);
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    margin: 0 auto
+}
+.container {
+    background-color: rgb(255,255,255);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 700px;
+    width: 400px;
+    overflow: auto;
+    transform: translate(-50%, -50%);
+    border: 5px solid rgb(190,46,49);
+    border-radius: 15px;
+}
+.goals {
+    padding: 10px 20px;
+    margin: 0;
+    font-size: 40px;
+}
+.recent {
+    padding: 5px 20px 10px 20px;
+    margin: 0;
+    color: rgb(135,144,161);
+    font-size: 23px;
+    font-weight: 600;
+}
+.footer {
+    margin-bottom: 20px;
+    z-index: 10;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    height: auto;
+    justify-content: center;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.144), rgba(255, 255, 255, 0.89) 50%);
+}
+.footer_button {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(4, 242, 250);
+    height: 50px;
+    width: 150px;
+    border-radius: 50px;
+}
+.footer_text {
+    color: rgb(255,255,255);
+    font-size: 20px;
 }
