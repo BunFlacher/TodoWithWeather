@@ -1,12 +1,13 @@
 import React from "react";
 import TodoItem from "./TodoItem";
-import {Todo} from "../types"
+import { TodoModel } from "./TodoModel";
 
-const TodoList: React.FC<{ todos: Array<Todo> }> = ({todos}) => {
-    return(
+const TodoList: React.FC<{todos: TodoModel[]}> = ({todos}) => {
+    console.log(todos)
+    return (
         <div>
-            {todos.map((todo) => 
-            <TodoItem todo={todo} key={todo.id}/>
+            {todos.map((todo:TodoModel) =>
+                <TodoItem todo={todo} key={todo.id} />
             )}
         </div>
     )
